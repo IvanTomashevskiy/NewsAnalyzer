@@ -1,0 +1,12 @@
+.autor .main__container_autor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 570px) {
+    .autor .main__container_autor {
+        flex-direction: column;
+        padding: 16px;
+    }
+}

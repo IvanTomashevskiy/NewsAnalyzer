@@ -1,0 +1,25 @@
+@import url(./_fr/analytics__percentage_fr.css);
+@import url(./_mo/analytics__percentage_mo.css);
+@import url(./_sa/analytics__percentage_sa.css);
+@import url(./_su/analytics__percentage_su.css);
+@import url(./_th/analytics__percentage_th.css);
+@import url(./_tu/analytics__percentage_tu.css);
+@import url(./_we/analytics__percentage_we.css);
+
+
+.analytics__percentage {
+    background: #2F71E5;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    padding-left: 5px;
+}

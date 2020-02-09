@@ -1,0 +1,12 @@
+@import url(./__container/main__container.css);
+@import url(./__search/main__search.css);
+@import url(./__results/main__results.css);
+@import url(./__clients/main__clients.css);
+@import url(./__autor/main__autor.css);
+@import url(./__technologies/main__technologies.css);
+@import url(./__commits/main__commits.css);
+@import url(./__analytics/main__analytics.css);
+
+.main {
+    width: 100%;
+}

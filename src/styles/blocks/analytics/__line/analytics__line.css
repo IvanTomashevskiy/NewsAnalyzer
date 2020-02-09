@@ -1,0 +1,17 @@
+@import url(./_underline/analytics__line_underline.css);
+@import url(./_first/analytics__line_first.css);
+@import url(./_quarters/analytics__line_quarters.css);
+
+.analytics__line {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    height: 36px;
+    margin-bottom: 44px;
+}
+
+.analytics__line:last-of-type {
+    margin-bottom: 0px;
+}

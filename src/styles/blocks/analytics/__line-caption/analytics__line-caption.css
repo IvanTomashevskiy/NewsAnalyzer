@@ -1,0 +1,20 @@
+@import url(./_month/analytics__line-caption_month.css);
+@import url(./_mo/analytics__line-caption_mo.css);
+@import url(./_tu/analytics__line-caption_tu.css);
+@import url(./_we/analytics__line-caption_we.css);
+@import url(./_th/analytics__line-caption_th.css);
+@import url(./_fr/analytics__line-caption_fr.css);
+@import url(./_sa/analytics__line-caption_sa.css);
+@import url(./_su/analytics__line-caption_su.css);
+
+.analytics__line-caption {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    color: #B6BCBF;
+}

@@ -1,0 +1,23 @@
+@import url(./__crumbs/analytics__crumbs.css);
+@import url(./__link/analytics__link.css);
+
+@import url(./__caption/analytics__caption.css);
+@import url(./__column/analytics__column.css);
+@import url(./__count/analytics__count.css);
+@import url(./__days/analytics__days.css);
+@import url(./__line-caption/analytics__line-caption.css);
+@import url(./__line/analytics__line.css);
+@import url(./__list-item/analytics__list-item.css);
+@import url(./__list/analytics__list.css);
+@import url(./__percentage/analytics__percentage.css);
+@import url(./__summary/analytics__summary.css);
+@import url(./__container/analytics__container.css);
+@import url(./__api-error/__api-error.css);
+
+.analytics {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

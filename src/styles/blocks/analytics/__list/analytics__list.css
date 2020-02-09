@@ -1,0 +1,21 @@
+.analytics__list {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    
+    color: #1A1B22;
+
+    list-style-type: none;
+    margin-block-start: 24px;
+    margin-block-end: 78px;
+    padding-inline-start: 0px;
+}
+@media screen and (max-width: 570px) {
+    .analytics__list {
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+}
+

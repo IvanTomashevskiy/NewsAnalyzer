@@ -1,0 +1,21 @@
+.commits__caption {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    
+    color: #1A1B22;
+
+    margin-block-start: 67px;
+    margin-block-end: 47px;
+}
+
+@media screen and (max-width: 570px) {
+    .commits__caption {
+        margin-block-start: 32px;
+        margin-block-end: 16px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

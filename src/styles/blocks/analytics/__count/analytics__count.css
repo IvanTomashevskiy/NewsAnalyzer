@@ -1,0 +1,6 @@
+@import url(./_headers/analytics__count_headers.css);
+@import url(./_news/analytics__count_news.css);
+
+.analytics__count {
+    font-weight: 900;
+}

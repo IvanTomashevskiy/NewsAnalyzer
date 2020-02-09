@@ -1,0 +1,31 @@
+@import url(./_clients/main__container_clients.css);
+@import url(./_technologies/main__container_technologies.css);
+@import url(./_autor/main__container_autor.css);
+
+.main__container {
+    width: 100%;
+    max-width: 1232px;
+    
+    padding: 80px 0px;
+
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .main__container {
+        max-width: 876px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        max-width: 728px;
+        padding: 40px 0px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .main__container {
+        width: 90%;
+    }
+}

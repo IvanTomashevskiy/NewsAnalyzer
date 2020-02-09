@@ -1,0 +1,16 @@
+.analytics__crumbs {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+
+    margin: 120px 0px 80px;
+}
+
+@media screen and (max-width: 570px) {
+    .analytics__crumbs {
+        display: none;
+    }
+}

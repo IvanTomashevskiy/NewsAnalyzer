@@ -1,0 +1,6 @@
+@import url(./_black/nav__item_selected_black.css);
+@import url(./_white/nav__item_selected_white.css);
+
+.nav__item_selected {
+    border-bottom: 2px solid;
+}

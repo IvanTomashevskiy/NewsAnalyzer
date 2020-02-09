@@ -1,0 +1,11 @@
+.main__container_technologies {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .main__container_technologies {
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,10 @@
+@import url(./__caption/clients__caption.css);
+@import url(./__text/clients__text.css);
+
+.clients {
+    width: 100%;
+    
+    background: white;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,5 @@
+.analytics__column_quarter {
+    max-width: 25%;
+    display: flex;
+    justify-content: space-between;
+}

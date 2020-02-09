@@ -1,0 +1,15 @@
+.analytics__link {
+    color: #1A1B22;
+    text-decoration: none;
+}
+
+.analytics__link:visited {
+    color: #1A1B22;
+    text-decoration: none;
+}
+
+.analytics__link:hover {
+    color: #1A1B22;
+    text-decoration: none;
+    font-weight: 700;
+}

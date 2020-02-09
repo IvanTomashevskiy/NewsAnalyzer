@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="NewsAnalyzer"> 
+		<link rel="shortcut icon" href="<%=require('./img/favicon.ico').default%>" type="image/x-icon">
+		<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+		<title>NewsAnalyzer</title>
+	</head>
+	<body class="body">
+		<div class="page">
+			<header class="page__header header header_black">
+				<div class="header__container">
+					<p class="header__title">
+						<a href="./index.html" class="header__link">NewsAnalyzer</a>
+					</p>
+					<nav class="header__nav">
+						<ul class="nav nav_header">
+							<li class="nav__item">
+								<a href="./index.html" class="nav__link">Главная</a>
+							</li>
+							<li class="nav__item">
+								<a href="./about.html" class="nav__link">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main class="page__main main">
+				<section class="main__analytics analytics">
+					<section class="analytics__summary">
+						<div class="analytics__crumbs">
+							<a href="./index.html" class="analytics__link">Главная</a>&nbsp;/&nbsp;Аналитика
+						</div>
+						<h1 class="analytics__caption analytics__caption_h1">
+							Вы спросили: &laquo;Путешествия&raquo;
+						</h1>
+						<ul class="analytics__list">
+							<li class="analytics__list-item">
+								Новостей за неделю <span class="analytics__count analytics__count_news">34&nbsp;324</span>
+							</li>
+							<li class="analytics__list-item">
+								Упоминаний в заголовках <span class="analytics__count analytics__count_headers">235</span>
+							</li>
+						</ul>
+					</section>
+					<section class="analytics__days">
+						<div class="analytics__api-error error error_hidden">
+                    		<picture>
+                        	<img 
+                            	src="<%=require('./img/error__sad.png').default%>" alt="Api is not available"
+                            	srcset="<%=require('./img/back@2x.png').default%> 2x, <%=require('./img/back.png').default%> 1x"
+                            	class="error__image">
+                    		</picture>
+                    		<h3 class="error__caption error__caption_h3">
+                        		Api не отвечает
+                    		</h3>
+                    		<p class="error__text error__text_block">
+                        		К сожалению Api не отвечает, попробуйте позднее.
+                    		</p>
+                		</div>
+						<div class="analytics__container">
+							<h3 class="analytics__caption analytics__caption_h3">
+								Аналитика по дням
+							</h3>
+							<div class="analytics__line analytics__line_underline analytics__line_first">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption">Дата<br />(<span class="analytics__line-caption_month">август</span>)</p>
+								</div>
+								<div class="analytics__column analytics__column_second">
+									<p class="analytics__line-caption">Кол-во Упоминаний</p>
+								</div>
+							</div>
+							<div class="analytics__line analytics__line_quarters">
+								<div class="analytics__column analytics__column_first"></div>
+								<div class="analytics__column analytics__column_quarter">
+									<p class="analytics__line-caption">0</p>
+								</div>
+								<div class="analytics__column analytics__column_quarter">
+									<p class="analytics__line-caption">25</p>
+								</div>
+								<div class="analytics__column analytics__column_quarter">
+									<p class="analytics__line-caption">50</p>
+								</div>
+								<div class="analytics__column analytics__column_quarter">
+									<p class="analytics__line-caption">75</p>
+									<p class="analytics__line-caption">100</p>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_mo">19, пн</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_mo">
+										15
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_tu">20, вт</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_tu">
+										18
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_we">21, ср</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_we">
+										11
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_th">22, чт</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_th">
+										39
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_fr">23, пт</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_fr">
+										45
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_sa">24, сб</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_sa">
+										73
+									</div>
+								</div>
+							</div>
+							<div class="analytics__line">
+								<div class="analytics__column analytics__column_first">
+									<p class="analytics__line-caption analytics__line-caption_su">25, вс</p>
+								</div>
+								<div class="analytics__column">
+									<div class="analytics__percentage analytics__percentage_su">
+										34
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</main>
+			<footer class="page__footer footer">
+				<div class="footer__container">
+					<p class="footer__copyright">
+						&copy;2019&nbsp;Supersite
+					</p>
+					<nav class="footer__nav">
+						<ul class="nav nav_footer">
+							<li class="nav__item nav__item_footer">
+								<a href="./index.html" class="nav__link">Главная</a>
+							</li>
+							<li class="nav__item nav__item_footer">
+								<a href="./about.html" class="nav__link">О проекте</a>
+							</li>
+							<li class="nav__item nav__item_footer">
+								<a href="https://praktikum.yandex.ru" class="nav__link" target="_blank" rel="noopener noreferrer nofollow">Яндекс.Практикум</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__social">
+						<a href="https://github.com/IvanTomashevskiy" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+							<picture>
+                            	<img 
+                                	src="<%=require('./img/footer_icon_github.png').default%>" alt="github"
+                                	srcset="<%=require('./img/footer_icon_github@2x.png').default%> 2x, <%=require('./img/footer_icon_github.png').default%> 1x"
+                                	class="footer__icon">
+                        	</picture>
+						</a>
+						<a href="" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+							<picture>
+                            	<img 
+                                	src="<%=require('./img/footer_icon_facebook.png').default%>" alt="facebook"
+                                	srcset="<%=require('./img/footer_icon_facebook@2x.png').default%> 2x, <%=require('./img/footer_icon_facebook.png').default%> 1x"
+                                	class="footer__icon">
+                        	</picture>
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+	</body>
+</html>

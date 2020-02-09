@@ -1,0 +1,7 @@
+.header_white {
+    color: #ffffff;
+
+    border-bottom: 1px solid;
+    border-color: rgba(196, 196, 196, 0.01);
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

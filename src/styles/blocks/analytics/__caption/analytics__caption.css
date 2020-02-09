@@ -1,0 +1,13 @@
+@import url(./_h1/analytics__caption_h1.css);
+@import url(./_h3/analytics__caption_h3.css);
+
+.analytics__caption {
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    
+    color: #1A1B22;
+
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}

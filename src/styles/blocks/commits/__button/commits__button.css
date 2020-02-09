@@ -1,0 +1,31 @@
+.commits__button {
+    display: none;
+}
+
+@media screen and (max-width: 570px) {
+    .commits__button {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        background: none;
+        color: #1A1B22;
+        border: 1px solid #1A1B22;
+        border-radius: 100px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 32px;
+    }
+    .commits__button:visited {
+        color: #1A1B22;
+        text-decoration: none;
+    }
+    .commits__button:hover {
+        color: #1A1B22;
+        text-decoration: none;
+    }
+}

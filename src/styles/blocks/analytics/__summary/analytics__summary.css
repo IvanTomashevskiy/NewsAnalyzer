@@ -1,0 +1,23 @@
+.analytics__summary {
+    width: 100%;
+    max-width: 1232px;
+    background: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .analytics__summary {
+        max-width: 876px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .analytics__summary {
+        max-width: 728px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .analytics__summary {
+        max-width: 90%;
+    }
+}

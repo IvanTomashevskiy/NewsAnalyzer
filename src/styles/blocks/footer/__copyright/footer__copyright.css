@@ -1,0 +1,20 @@
+.footer__copyright {
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    
+    color: #B6BCBF;
+
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+@media screen and (max-width: 570px) {
+    .footer__copyright {
+        margin-block-start: 40px;
+        margin-block-end: 22px;
+    }
+}
+

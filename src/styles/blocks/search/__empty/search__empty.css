@@ -1,0 +1,29 @@
+@import url(./_hidden/search__empty_hidden.css);
+
+.search__empty {
+    width: 608px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    
+    margin-block-end: 64px;
+    margin-block-start: 0px;
+}
+    
+@media screen and (max-width: 768px) {
+    .search__empty {
+        width: 452px;
+    }
+}
+    
+@media screen and (max-width: 570px) {
+    .search__empty {
+        width: 90%;
+        font-size: 20px;
+        line-height: 26px;
+        margin-block-end: 24px;
+    }
+}

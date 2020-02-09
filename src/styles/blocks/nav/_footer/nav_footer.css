@@ -1,0 +1,18 @@
+.footer .nav_footer {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 570px) {
+    .footer .nav_footer {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+}

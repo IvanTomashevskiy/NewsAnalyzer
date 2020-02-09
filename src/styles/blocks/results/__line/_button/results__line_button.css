@@ -1,0 +1,14 @@
+.results .results__line_button {
+    justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 80px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .results .results__line_button {
+        padding-top: 22px;
+        padding-bottom: 41px;
+    }
+}

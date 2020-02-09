@@ -1,0 +1,13 @@
+@import url(./__info/autor__info.css);
+@import url(./__photo/autor__photo.css);
+@import url(./__caption/autor__caption.css);
+@import url(./__text/autor__text.css);
+
+.autor {
+    width: 100%;
+    height: auto;
+
+    background: white;
+    display: flex;
+    justify-content: center;    
+}

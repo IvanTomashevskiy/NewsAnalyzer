@@ -1,0 +1,10 @@
+.autor__info {
+    width: 60%;
+}
+
+
+@media screen and (max-width: 570px) {
+    .autor__info {
+        width: 100%;
+    }
+}

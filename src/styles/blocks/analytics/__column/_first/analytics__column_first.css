@@ -1,0 +1,9 @@
+.analytics__column_first {
+    max-width: 104px;
+}
+
+@media screen and (max-width: 570px) {
+    .analytics__column_first {
+        max-width: 20%;
+    }
+}

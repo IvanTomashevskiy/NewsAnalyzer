@@ -1,0 +1,17 @@
+.search__form {
+    width: 608px;
+    height: 64px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .search__form {
+        width: 452px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .search__form {
+        width: 100%;
+    }
+}

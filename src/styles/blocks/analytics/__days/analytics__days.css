@@ -1,0 +1,14 @@
+.analytics__days {
+    width: 100%;
+    background: #F5F6F7;
+
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px 116px;
+}
+
+@media screen and (max-width: 570px) {
+    .analytics__days {
+        padding: 24px 0px 38px;
+    }
+}
