@@ -29,139 +29,111 @@
 				</div>
 			</header>
 			<main class="page__main main">
-				<section class="main__analytics analytics">
-					<section class="analytics__summary">
-						<div class="analytics__crumbs">
-							<a href="./index.html" class="analytics__link">Главная</a>&nbsp;/&nbsp;Аналитика
-						</div>
-						<h1 class="analytics__caption analytics__caption_h1">
-							Вы спросили: &laquo;Путешествия&raquo;
-						</h1>
-						<ul class="analytics__list">
-							<li class="analytics__list-item">
-								Новостей за неделю <span class="analytics__count analytics__count_news">34&nbsp;324</span>
-							</li>
-							<li class="analytics__list-item">
-								Упоминаний в заголовках <span class="analytics__count analytics__count_headers">235</span>
-							</li>
-						</ul>
-					</section>
-					<section class="analytics__days">
-						<div class="analytics__api-error error error_hidden">
-                    		<picture>
-                        	<img 
-                            	src="<%=require('./img/error__sad.png').default%>" alt="Api is not available"
-                            	srcset="<%=require('./img/back@2x.png').default%> 2x, <%=require('./img/back.png').default%> 1x"
-                            	class="error__image">
-                    		</picture>
-                    		<h3 class="error__caption error__caption_h3">
-                        		Api не отвечает
-                    		</h3>
-                    		<p class="error__text error__text_block">
-                        		К сожалению Api не отвечает, попробуйте позднее.
-                    		</p>
-                		</div>
-						<div class="analytics__container">
-							<h3 class="analytics__caption analytics__caption_h3">
-								Аналитика по дням
-							</h3>
-							<div class="analytics__line analytics__line_underline analytics__line_first">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption">Дата<br />(<span class="analytics__line-caption_month">август</span>)</p>
-								</div>
-								<div class="analytics__column analytics__column_second">
-									<p class="analytics__line-caption">Кол-во Упоминаний</p>
-								</div>
-							</div>
-							<div class="analytics__line analytics__line_quarters">
-								<div class="analytics__column analytics__column_first"></div>
-								<div class="analytics__column analytics__column_quarter">
-									<p class="analytics__line-caption">0</p>
-								</div>
-								<div class="analytics__column analytics__column_quarter">
-									<p class="analytics__line-caption">25</p>
-								</div>
-								<div class="analytics__column analytics__column_quarter">
-									<p class="analytics__line-caption">50</p>
-								</div>
-								<div class="analytics__column analytics__column_quarter">
-									<p class="analytics__line-caption">75</p>
-									<p class="analytics__line-caption">100</p>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_mo">19, пн</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_mo">
-										15
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_tu">20, вт</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_tu">
-										18
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_we">21, ср</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_we">
-										11
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_th">22, чт</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_th">
-										39
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_fr">23, пт</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_fr">
-										45
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_sa">24, сб</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_sa">
-										73
-									</div>
-								</div>
-							</div>
-							<div class="analytics__line">
-								<div class="analytics__column analytics__column_first">
-									<p class="analytics__line-caption analytics__line-caption_su">25, вс</p>
-								</div>
-								<div class="analytics__column">
-									<div class="analytics__percentage analytics__percentage_su">
-										34
-									</div>
+				<div class="paper-info">
+					<div class="paper-info__wrapper-up-title">
+						<span>Главная&nbsp;/</span>
+						<span>Аналитика</span>
+					</div>
+					<h1 class="paper-info__title"></h1>
+					<p class="paper-info__analytics">Новостей за неделю: <b class="news-week-count"></b></p>
+					<p class="paper-info__analytics">Упоминаний в заголовках: <b class="title-query-count"></b></p>
+				</div>
+						
+				<div class="analytics">
+			
+					<h2 class="analytics__title">Аналитика по дням</h2>
+			
+					<div class="analytics__wrapper-text">
+						<p class="analytics-caption"></p>
+			
+						<p class="analytics-caption">Кол-во упоминаний</p>
+					</div>
+			
+					<div class="analytics__wrapper-numbers">
+						<p class="line-number">0</p>
+						<p class="line-number">25</p>
+						<p class="line-number">50</p>
+						<p class="line-number">75</p>
+						<p class="line-number">100</p>
+					</div>
+			
+					<div class="analytics__graphic">
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
 								</div>
 							</div>
 						</div>
-					</section>
-				</section>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+				
+								</div>
+							</div>
+						</div>
+							  
+					</div>
+			
+					<div class="analytics__wrapper-numbers">
+						<p class="line-number">0</p>
+						<p class="line-number">25</p>
+						<p class="line-number">50</p>
+						<p class="line-number">75</p>
+						<p class="line-number">100</p>
+					</div>
+			
+				</div>
 			</main>
 			<footer class="page__footer footer">
 				<div class="footer__container">

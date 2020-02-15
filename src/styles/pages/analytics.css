@@ -9,3 +9,9 @@
 @import url('../blocks/analytics/analytics.css');
 @import url('../blocks/error/error.css');
 @import url('../blocks/footer/footer.css');
+
+
+.page{
+    box-sizing: border-box;
+    overflow: hidden;
+}

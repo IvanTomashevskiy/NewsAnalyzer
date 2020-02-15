@@ -1,0 +1,12 @@
+    .content-index-card__text{
+        width: 105%;
+        font-family: Roboto,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #1a1b22;
+        margin-block-start: 16px;
+        margin-block-end: 0;
+    }
+    

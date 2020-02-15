@@ -1,23 +1,35 @@
-@import url(./__crumbs/analytics__crumbs.css);
-@import url(./__link/analytics__link.css);
+@import url('./__graphic/analytics__graphic.css');
+@import url('./__title/analytics__title.css');
+@import url('./__wrapper-numbers/analytics__wrapper-numbers.css');
+@import url('./__wrapper-text/analytics__wrapper-text.css');
+@import url('./paper-info/paper-info.css');
+@import url('./text-line-wrapper/text-line-wrapper.css');
 
-@import url(./__caption/analytics__caption.css);
-@import url(./__column/analytics__column.css);
-@import url(./__count/analytics__count.css);
-@import url(./__days/analytics__days.css);
-@import url(./__line-caption/analytics__line-caption.css);
-@import url(./__line/analytics__line.css);
-@import url(./__list-item/analytics__list-item.css);
-@import url(./__list/analytics__list.css);
-@import url(./__percentage/analytics__percentage.css);
-@import url(./__summary/analytics__summary.css);
-@import url(./__container/analytics__container.css);
-@import url(./__api-error/__api-error.css);
+.analytics{
+    margin: 0 auto;
+    background-color: #F5F6F7;
+}
 
-.analytics {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media screen and (min-width: 320px){
+    .analytics{
+        width: 100%;
+        padding: 24px 16px 38px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .analytics{
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .analytics{
+        width: 1440px;
+        padding-left: 104px;
+        padding-right: 104px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }

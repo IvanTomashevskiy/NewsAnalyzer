@@ -11,6 +11,7 @@
 @import url(./__text/results__text.css);
 
 @import url(./_hidden/results_hidden.css);
+@import url(./__lines.css);
 
 .results {
     width: 100%;

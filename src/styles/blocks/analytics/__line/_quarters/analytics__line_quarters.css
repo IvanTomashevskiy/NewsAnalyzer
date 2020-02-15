@@ -1,9 +1,0 @@
-.analytics .analytics__line_quarters {
-    margin-bottom: 0px;
-}
-
-@media screen and (max-width: 570px) {
-    .analytics .analytics__line_quarters {
-        display: none;
-    }
-}
