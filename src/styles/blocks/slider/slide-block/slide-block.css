@@ -1,0 +1,9 @@
+@import url('./__data/slide-block__data.css');
+@import url('./__user/slide-block__user.css');
+@import url('./__text/slide-block__text.css');
+@import url('./user-contacts/user-contacts.css');
+@import url('./user-photo/user-photo.css');
+
+.slide-block{
+    padding: 24px 0 0 24px;
+}
