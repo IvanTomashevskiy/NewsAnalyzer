@@ -38,8 +38,9 @@
                         Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
                     </p>
                     <div class="search__search">
-                        <form action="" class="search__form">
-                            <input type="text" name="search" class="search__input" placeholder="Введите тему новости" minlength="2" maxlength="30">
+                        <form class="search__form">
+                            <input type="text" name="search" class="search__input" placeholder="Введите тему новости" minlength="2" maxlength="30" required>
+                            <span id = "error" class="search__error" aria-live = 'polite'></span>
                             <button class="search__button">Искать</button>
                             <p class="search__empty search__empty_hidden">
                                 Введите запрос, например &laquo;котики&raquo;
@@ -89,7 +90,7 @@
                         <a href="./analytics.html" class="results__link">
                             Посмотреть аналитику&nbsp;​
                             <picture>
-                                <source srcset="<%=require('./img/back.svg')%>" type="image/svg+xml">
+                                <source src="<%=require('./img/back.svg')%>" type="image/svg+xml">
                                 <img
                                     src="<%=require('./img/back.png').default%>" alt="arrow"
                                     srcset="<%=require('./img/back@2x.png').default%> 2x, <%=require('./img/back.png').default%> 1x"

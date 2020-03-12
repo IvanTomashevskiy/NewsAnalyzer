@@ -141,11 +141,20 @@
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev arrow-prev">
-                        <img src="<%=require('./img/slider-left.svg')%>" alt="кнопка назад">
+                        <picture>
+                            <img 
+                            src="<%=require('./img/slider-control.png')%>" alt="кнопка назад"
+                            srcset="<%=require('./img/slider-control.png').default%> "
+                           >
+                        </picture>
                     </div>
                     <div class="swiper-button-next arrow-next">
-                        <img src="<%=require('./img/slider-right.svg')%>" alt="кнопка вперед">
-                    </div>            
+                        <picture>
+                            <img 
+                            src="<%=require('./img/slider-control.png')%>" alt="кнопка назад"
+                            srcset="<%=require('./img/slider-control.png').default%> "
+                           >
+                        </picture>                    </div>            
                 </div>
         
                 <div class="slider__button">

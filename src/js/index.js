@@ -26,6 +26,14 @@ const newsApi = new NewsAPI(dateForApi);
 
 const storage = new Storage;
 const cards = new Cards;
+import Validate from '../js/modules/val'
+
+const input = document.querySelector('.search__input');
+const contentInput = document.querySelector('.search__form');
+
+const validate = new Validate (contentInput);
+
+
 
 const newsLoad = () => {
     if (storage.checkLocalstorage()) {
@@ -56,15 +64,9 @@ buttonSearch.addEventListener('click', () => {
             .then(data => {
                 if (data.length === 0) {
     
-                    // если искомых новостей не найдено
-                    // отрисовывается пустой блок, с соответствующим
-                    // сообщением
                     cards.newsEmpty();
                 } else {
                     
-                    // если данные получены, сохраняется запрос и сами данные
-                    // в localStorage, а также, происходит отрисовка и загрузка
-                    // информации
                     storage.textQuery(query);
                     storage.save(data);
                     newsLoad();
@@ -76,3 +78,4 @@ buttonSearch.addEventListener('click', () => {
     }
     
 });
+
