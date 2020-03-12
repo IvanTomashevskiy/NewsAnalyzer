@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="NewsAnalyzer"> 
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="index.fd4e330b852512622b13.css?25bd7d6557b5043a4262">
+    <link rel="stylesheet" href="index.2642f21c3deec5f24e22.css?d85b8f709f192e6fa158">
     <title>NewsAnalyzer</title>
 </head>
 <body class="body">
@@ -38,8 +38,9 @@
                         Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
                     </p>
                     <div class="search__search">
-                        <form action="" class="search__form">
-                            <input type="text" name="search" class="search__input" placeholder="Введите тему новости" minlength="2" maxlength="30">
+                        <form class="search__form">
+                            <input type="text" name="search" class="search__input" placeholder="Введите тему новости" minlength="2" maxlength="30" required>
+                            <span id = "error" class="search__error" aria-live = 'polite'></span>
                             <button class="search__button">Искать</button>
                             <p class="search__empty search__empty_hidden">
                                 Введите запрос, например &laquo;котики&raquo;
@@ -89,7 +90,7 @@
                         <a href="./analytics.html" class="results__link">
                             Посмотреть аналитику&nbsp;​
                             <picture>
-                                <source srcset="[object Module]" type="image/svg+xml">
+                                <source src="[object Module]" type="image/svg+xml">
                                 <img
                                     src="./img/back.png" alt="arrow"
                                     srcset="./img/back@2x.png 2x, ./img/back.png 1x"
@@ -176,6 +177,6 @@
             </div>
         </footer>
     </div>
-    <script src="index.bundle.js?25bd7d6557b5043a4262"></script>
+    <script src="index.bundle.js?d85b8f709f192e6fa158"></script>
 </body>
 </html>
