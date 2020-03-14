@@ -1,4 +1,4 @@
-import {CARDS_IN_LINE} from '../../../js/modules/consts';
+import {CARDS_IN_LINE} from './consts';
 
 import {
     input,
@@ -10,7 +10,7 @@ import {
     emptyBlock,
     analyticLink,
     buttonSearch
-} from '../../../js/modules/Dom';
+} from './Dom';
 
 export class Cards {
     constructor() {

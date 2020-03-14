@@ -2,10 +2,12 @@ import "../styles/pages/index.css";
 import {
     buttonSearch,
     buttonMoreContainer,
-    buttonMore
+    buttonMore,
+    input,
+    contentInput
 } from '../js/modules/Dom';
 
-import {UserRequest} from '../styles/blocks/search/userReq';
+import {UserRequest} from './modules/userReq';
 
 import {Utilities} from '../js/modules/utilities';
 import {DateCalc} from '../js/modules/Date';
@@ -13,7 +15,7 @@ import {DateCalc} from '../js/modules/Date';
 import {NewsAPI} from '../js/modules/api/NewsApi';
 import {Storage} from '../js/modules/storage';
 
-import {Cards} from '../styles/blocks/results/cards';
+import {Cards} from './modules/cards';
 
 let query;
 
@@ -28,8 +30,7 @@ const storage = new Storage;
 const cards = new Cards;
 import Validate from '../js/modules/val'
 
-const input = document.querySelector('.search__input');
-const contentInput = document.querySelector('.search__form');
+
 
 const validate = new Validate (contentInput);
 
