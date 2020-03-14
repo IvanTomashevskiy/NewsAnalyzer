@@ -4,7 +4,7 @@ import {
     MONTHS_FOR_CONVERT_DATE, 
     MONTHS_FOR_CAPTION_ANALYTICS_DATA, 
     DAYS} 
-from '../modules/consts';
+from './consts';
 
 export class DateCalc {
 

@@ -7,7 +7,15 @@ import {input} from './Dom';
 
 export class UserRequest{
 
+    validation() {
 
+        
+        if ((input.checkValidity()) && (input.value.trim() !== '')) {
+            if (this._xssProtect() !== '') {
+                return this._xssProtect();
+            } else this._updateInput('Нужно ввести ключевое слово');
+        } else this._updateInput('Нужно ввести ключевое слово');
+    }
     _xssProtect() {
         const xssTests = input.value.trim().split('');
         xssTests.forEach((item, index) => {

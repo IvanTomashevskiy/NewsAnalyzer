@@ -1,4 +1,4 @@
-import {CARDS_IN_LINE} from './consts';
+import {CARDS_IN_LINE} from '../modules/consts';
 
 import {
     input,
@@ -10,7 +10,7 @@ import {
     emptyBlock,
     analyticLink,
     buttonSearch
-} from './Dom';
+} from '../modules/Dom';
 
 export class Cards {
     constructor() {
@@ -99,7 +99,6 @@ export class Cards {
         this.cardTextWrapper.appendChild(this.cardTextWrapperMain);
     }
 
-    // метод отображения надписи "Изображение не найдено.", в случае отсутствия изображения новости, на сервере
     _emptyPicture() {
         this.nonPictureBlock = document.createElement('div');
         this.message = document.createElement('p');
@@ -110,7 +109,6 @@ export class Cards {
         return this.nonPictureBlock;
     }
 
-    // проверка доступности картинки карточки новостей на сервере
     _checkLoadImage(url) {
         const promise = new Promise((resolve, reject) => {
             const image = document.createElement('img');
@@ -125,7 +123,6 @@ export class Cards {
         return promise;
     }
 
-    // создание готовой карточки без картинки
     _createBlocks(cardData, dateCalc) {
         this._createCardElements();
         this._addClass();
@@ -138,7 +135,6 @@ export class Cards {
         contentIndexResult.appendChild(this.cardLink);
     }
 
-    // добавление картинки новостей, в зависисмости от ее доступности на сервере
     _makeCard(cardData, dateCalc) {        
         this._checkLoadImage(cardData.urlToImage)
             .then((img) => {
@@ -151,14 +147,12 @@ export class Cards {
             });   
     }
 
-    // метод, удаляющий кнопку "Показать еще", при достижении
-    // последней карточки в массиве
+    
     _stopShow() {
         buttonMoreContainer.style.display = 'none';
         return;
     }
 
-    // метод кнопки "Показать еще", показывающий следующие три карточки
     showMore(storage, dateCalc) {
         this.startPosition = this.startPosition + CARDS_IN_LINE;
         for (let i = 0; i < CARDS_IN_LINE; i++) {
@@ -174,7 +168,6 @@ export class Cards {
         }
     }
 
-    // создание карточек
     createCardsBlock(storage, dateCalc) {
         this.startPosition = 0;
         const lastQuery = JSON.parse(localStorage.getItem('query'));
@@ -182,15 +175,12 @@ export class Cards {
             input.value = lastQuery;
         }
             
-        // в случае, если карточек > 3, происходит последовательная отрисовка
-        // карточек - по три в каждой строке, при нажатии на кнопку "Показать еще"
+        
         if (storage.length > CARDS_IN_LINE) {        
             for (let i = 0; i < CARDS_IN_LINE; i ++) {        
                 this._makeCard(storage[i], dateCalc);    
             }
-                
-            // если карточек < 3, кнопка "Показать еще" не 
-            // требуется, происходит отрисовка имеющихся карточек    
+                  
         } else {
             storage.forEach((item) => {
                 this._makeCard(item, dateCalc);
