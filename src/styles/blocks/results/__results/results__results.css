@@ -1,0 +1,25 @@
+.results__results {
+    width: 100%;
+    max-width: 1230px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .results__results {
+        width: 90%;
+        max-width: 876px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .results__results {
+        max-width: 382px;
+        padding-top: 32px;
+    }
+}

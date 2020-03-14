@@ -1,0 +1,21 @@
+.news__text {
+    width: 105%;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #1A1B22;
+
+    margin-block-start: 16px;
+    margin-block-end: 0em;
+}
+
+@media screen and (max-width: 570px) {
+    .news__text {
+        width: calc(100%-32px);
+        max-width: 90%;
+    }
+}

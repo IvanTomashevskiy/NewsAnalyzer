@@ -1,0 +1,30 @@
+@import url(_header/nav_header.css);
+@import url(_footer/nav_footer.css);
+
+@import url(__item/nav__item.css);
+@import url(__link/nav__link.css);
+
+.nav {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0px;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    
+    list-style-type: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 570px) {
+    .nav {
+        height: auto;
+    }
+}

@@ -1,0 +1,18 @@
+    .content-index-card__img{
+        width: calc(100% + 48px);
+    
+        /* исправить отрицательные маргины на много положительных у других элементов */
+        margin-left: -24px;
+        margin-top: -24px;
+    
+    }
+    
+    @media screen and (max-width: 570px) {
+        .content-index-card__img{
+            width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-top: -16px;
+            margin-bottom: 10px;
+        }
+    }
+    

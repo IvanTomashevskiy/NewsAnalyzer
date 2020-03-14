@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="NewsAnalyzer">
+    <link rel="shortcut icon" href="<%=require('./img/favicon.ico').default%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
+    <title>NewsAnalyzer</title>
+</head>
+<body class="body">
+    <div class="page">
+        <header class="page__header header header_black">
+            <div class="header__container">
+                <p class="header__title">
+                    <a href="./index.html" class="header__link">NewsAnalyzer</a>
+                </p>
+                <nav class="header__nav">
+                    <ul class="nav nav_header">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item nav__item_selected nav__item_selected_black">
+                            <a href="./about.html" class="nav__link">О проекте</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="page__main main">
+            <section class="main__clients clients">
+                <div class="main__container main__container_clients">
+                    <h2 class="clients__caption">Клиентам</h2>
+                    <p class="clients__text">
+                        Этот сайт&nbsp;&mdash; дипломный проект студента Яндекс.Практикума. Его цель&nbsp;&mdash; показать, чему научился студент, и какими технологиями владеет.
+                    </p>
+                    <p class="clients__text">
+                         Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
+                    </p>
+                    <p class="clients__text">
+                        Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+                    </p>
+                    <p class="clients__text">
+                        При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых браузерах. Даже если посетители&nbsp;&mdash; пользователи старых операционных систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.
+                    </p>
+                    <p class="clients__text">
+                        Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+                    </p>
+                </div>
+            </section>
+            <section class="main__technologies technologies">
+                <div class="main__container main__container_technologies">
+                    <h2 class="technologies__caption">
+                        Используемые технологии
+                    </h2>
+                    <div class="technologies__items">
+                        <div class="technologies__item">
+                            <p class="technologies__label">HTML</p>
+                            <picture>
+                                <img
+                                    src="<%=require('./img/technologies__item_html.png').default%>" alt="HTML"
+                                    srcset="<%=require('./img/technologies__item_html@2x.png').default%> 2x, <%=require('./img/technologies__item_html.png').default%> 1x"
+                                    class="technologies__image">
+                            </picture>
+                        </div>
+                        <div class="technologies__item">
+                            <p class="technologies__label">CSS</p>
+                            <picture>
+                                <img
+                                    src="<%=require('./img/technologies__item_css.png').default%>" alt="CSS"
+                                    srcset="<%=require('./img/technologies__item_css@2x.png').default%> 2x, <%=require('./img/technologies__item_css.png').default%> 1x"
+                                    class="technologies__image">
+                            </picture>
+                        </div>
+                        <div class="technologies__item">
+                            <p class="technologies__label">Java Script</p>
+                            <picture>
+                                <img
+                                    src="<%=require('./img/technologies__item_js.png').default%>" alt="Java Script"
+                                    srcset="<%=require('./img/technologies__item_js@2x.png').default%> 2x, <%=require('./img/technologies__item_js.png').default%> 1x"
+                                    class="technologies__image">
+                            </picture>
+                        </div>
+                        <div class="technologies__item">
+                            <p class="technologies__label">Webpack</p>
+                            <picture>
+                                <img
+                                    src="<%=require('./img/technologies__item_webpack.png').default%>" alt="Webpack"
+                                    srcset="<%=require('./img/technologies__item_webpack@2x.png').default%> 2x, <%=require('./img/technologies__item_webpack.png').default%> 1x"
+                                    class="technologies__image">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main__autor autor">
+                <div class="main__container main__container_autor">
+                    <picture>
+                        <img 
+                        src="<%=require('./img/6.jpg').default%>" alt="Фото автора"
+                        srcset="<%=require('./img/6.jpg').default%> "
+                        class="autor__photo">
+                    </picture>
+                    <div class="autor__info">
+                        <h2 class="autor__caption">Об авторе</h2>
+                        <p class="autor__text">
+                            Здравствуйте. Меня зовут Иван, я - Фронтенд-разработчик и автор News Analyzer.                        
+                        </p>
+                        <p class="autor__text">
+                            Данное приложение позволяет:                       
+                        </p>
+                        <p class="autor__text">
+                            &#10102; Осуществлять поиск новостей по ключевым словам за последние семь дней.                         
+                        </p>
+                        <p class="autor__text">
+                            &#10103; Автоматически сохранять и отображать, при последующем посещении, результаты поиска.                         
+                        </p>
+                        <p class="autor__text">
+                            &#10104; Строить гистограмму аналитики по упоминанию ключевых слов в новостях и заголовках за последние семь дней.
+                        </p>
+                        <p class="autor__text">
+                            Применяемый стек технологий: JS, ES6, БЭМ, ООП, CSS, HTML, NPM, Webpack, GIT. Также, применялись следующие библиотеки: Fetch API, GitHub API, News API, Swiper API.
+                        </p>
+                    </div>
+                </div>
+            </section>
+          
+            <section class="slider">
+
+                <div class="slider__header">
+                    <h3 class="slider-header-caption">История коммитов из GitHub</h3>
+                    <a href="https://github.com/IvanTomashevskiy" class="slider-link-wrapper link" target="_blank" rel="noopener noreferrer nofollow">
+                        <p class="slider-link-wrapper__text">Открыть в  Github</p>
+                        <p class="slider-link-wrapper__arrow">&gt;</p>
+                    </a>
+                </div>
+        
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev arrow-prev">
+                        <picture>
+                            <img 
+                            src="<%=require('./img/slider-control.png')%>" alt="кнопка назад"
+                            srcset="<%=require('./img/slider-control.png').default%> "
+                           >
+                        </picture>
+                    </div>
+                    <div class="swiper-button-next arrow-next">
+                        <picture>
+                            <img 
+                            src="<%=require('./img/slider-control.png')%>" alt="кнопка назад"
+                            srcset="<%=require('./img/slider-control.png').default%> "
+                           >
+                        </picture>                    
+                    </div>            
+                </div>
+        
+                <div class="slider__button">
+                    <div class="wrapper-slider-button">
+                        <p class="wrapper-slider-button__text">Открыть в GitHub</p>
+                        <button class="button button-more"></button>
+                    </div>
+                </div>
+            
+            </section>
+        </main>
+        <footer class="page__footer footer">
+            <div class="footer__container">
+                <p class="footer__copyright">
+                    &copy;2019&nbsp;Supersite
+                </p>
+                <nav class="footer__nav">
+                    <ul class="nav nav_footer">
+                        <li class="nav__item nav__item_footer">
+                            <a href="./index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item nav__item_footer">
+                            <a href="./about.html" class="nav__link">О проекте</a>
+                        </li>
+                        <li class="nav__item nav__item_footer">
+                            <a href="https://praktikum.yandex.ru" class="nav__link" target="_blank" rel="noopener noreferrer nofollow">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <a href="https://github.com/IvanTomashevskiy" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+						<picture>
+                            <img
+                                src="<%=require('./img/footer_icon_github.png').default%>" alt="github"
+                                srcset="<%=require('./img/footer_icon_github@2x.png').default%> 2x, <%=require('./img/footer_icon_github.png').default%> 1x"
+                                class="footer__icon">
+                        </picture>
+					</a>
+					<a href="" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+						<picture>
+                            <img
+                                src="<%=require('./img/footer_icon_facebook.png').default%>" alt="facebook"
+                                srcset="<%=require('./img/footer_icon_facebook@2x.png').default%> 2x, <%=require('./img/footer_icon_facebook.png').default%> 1x"
+                                class="footer__icon">
+                        </picture>
+					</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+</body>
+</html>

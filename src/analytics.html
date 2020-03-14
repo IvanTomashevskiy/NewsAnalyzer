@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="NewsAnalyzer"> 
+		<link rel="shortcut icon" href="<%=require('./img/favicon.ico').default%>" type="image/x-icon">
+		<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+		<title>NewsAnalyzer</title>
+	</head>
+	<body class="body">
+		<div class="page">
+			<header class="page__header header header_black">
+				<div class="header__container">
+					<p class="header__title">
+						<a href="./index.html" class="header__link">NewsAnalyzer</a>
+					</p>
+					<nav class="header__nav">
+						<ul class="nav nav_header">
+							<li class="nav__item">
+								<a href="./index.html" class="nav__link">Главная</a>
+							</li>
+							<li class="nav__item">
+								<a href="./about.html" class="nav__link">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main class="page__main main">
+				<div class="paper-info">
+					<div class="paper-info__wrapper-up-title">
+						<span>Главная&nbsp;/</span>
+						<span>Аналитика</span>
+					</div>
+					<h1 class="paper-info__title"></h1>
+					<p class="paper-info__analytics">Новостей за неделю: <b class="news-week-count"></b></p>
+					<p class="paper-info__analytics">Упоминаний в заголовках: <b class="title-query-count"></b></p>
+				</div>
+						
+				<div class="analytics">
+			
+					<h2 class="analytics__title">Аналитика по дням</h2>
+			
+					<div class="analytics__wrapper-text">
+						<p class="analytics-caption"></p>
+			
+						<p class="analytics-caption">Кол-во упоминаний</p>
+					</div>
+			
+					<div class="analytics__wrapper-numbers">
+						<p class="line-number">0</p>
+						<p class="line-number">25</p>
+						<p class="line-number">50</p>
+						<p class="line-number">75</p>
+						<p class="line-number">100</p>
+					</div>
+			
+					<div class="analytics__graphic">
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="graphic-data">
+							<p class="graphic-data__text"></p>
+							<div class="graphic-data__line-wrapper">
+								<div class="text-line-wrapper">
+									<p class="text-line-wrapper__line-info-text"></p>
+				
+								</div>
+							</div>
+						</div>
+							  
+					</div>
+			
+					<div class="analytics__wrapper-numbers">
+						<p class="line-number">0</p>
+						<p class="line-number">25</p>
+						<p class="line-number">50</p>
+						<p class="line-number">75</p>
+						<p class="line-number">100</p>
+					</div>
+			
+				</div>
+			</main>
+			<footer class="page__footer footer">
+				<div class="footer__container">
+					<p class="footer__copyright">
+						&copy;2019&nbsp;Supersite
+					</p>
+					<nav class="footer__nav">
+						<ul class="nav nav_footer">
+							<li class="nav__item nav__item_footer">
+								<a href="./index.html" class="nav__link">Главная</a>
+							</li>
+							<li class="nav__item nav__item_footer">
+								<a href="./about.html" class="nav__link">О проекте</a>
+							</li>
+							<li class="nav__item nav__item_footer">
+								<a href="https://praktikum.yandex.ru" class="nav__link" target="_blank" rel="noopener noreferrer nofollow">Яндекс.Практикум</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__social">
+						<a href="https://github.com/IvanTomashevskiy" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+							<picture>
+                            	<img 
+                                	src="<%=require('./img/footer_icon_github.png').default%>" alt="github"
+                                	srcset="<%=require('./img/footer_icon_github@2x.png').default%> 2x, <%=require('./img/footer_icon_github.png').default%> 1x"
+                                	class="footer__icon">
+                        	</picture>
+						</a>
+						<a href="" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+							<picture>
+                            	<img 
+                                	src="<%=require('./img/footer_icon_facebook.png').default%>" alt="facebook"
+                                	srcset="<%=require('./img/footer_icon_facebook@2x.png').default%> 2x, <%=require('./img/footer_icon_facebook.png').default%> 1x"
+                                	class="footer__icon">
+                        	</picture>
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+	</body>
+</html>

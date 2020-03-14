@@ -1,0 +1,22 @@
+@import url(./__results/results__results.css);
+@import url(./__nothing-found/results__nothing-found.css);
+@import url(./__searching/results__searching.css);
+
+
+@import url(./__caption/results__caption.css);
+@import url(./__link/results__link.css);
+@import url(./__line/results__line.css);
+@import url(./__button/results__button.css);
+@import url(./__image/results__image.css);
+@import url(./__text/results__text.css);
+
+@import url(./_hidden/results_hidden.css);
+@import url(./__lines.css);
+
+.results {
+    width: 100%;
+    background: #F5F6F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

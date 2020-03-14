@@ -1,0 +1,13 @@
+.nav__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav__link:visited {
+    color: inherit;
+}
+
+.nav__link:hover {
+    color: inherit;
+    font-weight: 500;
+}

@@ -1,0 +1,21 @@
+.technologies__items {
+    width: 600px;
+    height: 153px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 768px) {
+    .technologies__items {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .technologies__items {
+        height: auto;
+        flex-wrap: wrap;
+    }
+}

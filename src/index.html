@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="NewsAnalyzer"> 
+    <link rel="shortcut icon" href="<%=require('./img/favicon.ico').default%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
+    <title>NewsAnalyzer</title>
+</head>
+<body class="body">
+    <div class="page">
+        <header class="page__header header header_white">
+            <div class="header__container">
+                <p class="header__title">
+                    <a href="./index.html" class="header__link">NewsAnalyzer</a>
+                </p>
+                <nav class="header__nav">
+                    <ul class="nav nav_header">
+                        <li class="nav__item nav__item_selected nav__item_selected_white">
+                            <a href="./index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./about.html" class="nav__link">О проекте</a>
+                        </li>                    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="page__main main">
+            <section class="main__search search">
+                <div class="search__elements">
+                    <h1 class="search__caption">
+                        Что в мире творится?
+                    </h1>
+                    <p class="search__text">
+                        Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+                    </p>
+                    <div class="search__search">
+                        <form class="search__form">
+                            <input type="text" name="search" class="search__input" placeholder="Введите тему новости" minlength="2" maxlength="30" required>
+                            <span id = "error" class="search__error" aria-live = 'polite'></span>
+                            <button class="search__button">Искать</button>
+                            <p class="search__empty search__empty_hidden">
+                                Введите запрос, например &laquo;котики&raquo;
+                            </p>
+                        </form>
+                    </div>
+                </div>                
+            </section>
+            <section class="main__resuilts results">
+                <div class="results__searching results_hidden preloader">
+                    <i class="preloader__circle-preloader"></i>
+                    <p class="results__text">
+                        Идёт поиск новостей...
+                    </p>
+                </div>
+                <div class="results__nothing-found error error_hidden">
+                    
+                        <img 
+                            src="<%=require('./img/not-found_v1.png').default%>" alt="Nothing found"
+                            class="error__image">
+                    <h3 class="error__caption error__caption_h3">
+                        Ничего не найдено
+                    </h3>
+                    <p class="error__text error__text_block">
+                        К сожалению по вашему запросу ничего не найдено.
+                    </p>
+                </div>
+                <div class="results__api-error error error_hidden">
+                    <picture>
+                        <img 
+                            src="<%=require('./img/not-found_v1.png').default%>" alt="Api is not available"
+                            srcset="<%=require('./img/back@2x.png').default%> 2x, <%=require('./img/back.png').default%> 1x"
+                            class="error__image">
+                    </picture>
+                    <h3 class="error__caption error__caption_h3">
+                        Api не отвечает
+                    </h3>
+                    <p class="error__text error__text_block">
+                        К сожалению Api не отвечает, попробуйте позднее.
+                    </p>
+                </div>
+                <div class="results__results">
+                    <div class="results__line results__line_caption">
+                        <h2 class="results__caption results__caption_h2">
+                            Результаты поиска
+                        </h2>
+                        <a href="./analytics.html" class="results__link">
+                            Посмотреть аналитику&nbsp;​
+                            <picture>
+                                <!-- <source src="<%=require('./img/back.svg')%>" type="image/svg+xml"> -->
+                                <img
+                                    src="<%=require('./img/back.png').default%>" alt="arrow"
+                                    srcset="<%=require('./img/back@2x.png').default%> 2x, <%=require('./img/back.png').default%> 1x"
+                                >
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="results__lines">
+                        
+                    </div>
+                    <div class="results__line results__line_button">
+                        <button class="results__button">Показать ещё</button>
+                    </div>
+                </div>
+            </section>
+            <section class="main__autor autor">
+                <div class="main__container main__container_autor">
+                    <picture>
+                        <img 
+                            src="<%=require('./img/6.jpg').default%>" alt="Фото автора"
+                            srcset="<%=require('./img/6.jpg').default%> "
+                            class="autor__photo">
+                    </picture>
+                    <div class="autor__info">
+                        <h2 class="autor__caption">Об авторе</h2>
+                        <p class="autor__text">
+                            Здравствуйте. Меня зовут Иван, я - Фронтенд-разработчик и автор News Analyzer.                        
+                        </p>
+                        <p class="autor__text">
+                            Данное приложение позволяет:                       
+                        </p>
+                        <p class="autor__text">
+                            &#10102; Осуществлять поиск новостей по ключевым словам за последние семь дней.                         
+                        </p>
+                        <p class="autor__text">
+                            &#10103; Автоматически сохранять и отображать, при последующем посещении, результаты поиска.                         
+                        </p>
+                        <p class="autor__text">
+                            &#10104; Строить гистограмму аналитики по упоминанию ключевых слов в новостях и заголовках за последние семь дней.
+                        </p>
+                        <p class="autor__text">
+                            Применяемый стек технологий: JS, ES6, БЭМ, ООП, CSS, HTML, NPM, Webpack, GIT. Также, применялись следующие библиотеки: Fetch API, GitHub API, News API, Swiper API.
+                        </p>
+                    </div>
+                </div>                
+            </section>
+        </main>
+        <footer class="page__footer footer">
+            <div class="footer__container">
+                <p class="footer__copyright">
+                    &copy;2019&nbsp;Supersite
+                </p>
+                <nav class="footer__nav">
+                    <ul class="nav nav_footer">
+                        <li class="nav__item nav__item_footer">
+                            <a href="./index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item nav__item_footer">
+                            <a href="./about.html" class="nav__link">О проекте</a>
+                        </li>   
+                        <li class="nav__item nav__item_footer">
+                            <a href="https://praktikum.yandex.ru" class="nav__link" target="_blank" rel="noopener noreferrer nofollow">Яндекс.Практикум</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <a href="https://github.com/IvanTomashevskiy" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+                        <picture>
+                            <img 
+                                src="<%=require('./img/footer_icon_github.png').default%>" alt="github"
+                                srcset="<%=require('./img/footer_icon_github@2x.png').default%> 2x, <%=require('./img/footer_icon_github.png').default%> 1x"
+                                class="footer__icon">
+                        </picture>
+                    </a>
+                    <a href="" class="footer__link" target="_blank" rel="noopener noreferrer nofollow">
+                        <picture>
+                            <img 
+                                src="<%=require('./img/footer_icon_facebook.png').default%>" alt="facebook"
+                                srcset="<%=require('./img/footer_icon_facebook@2x.png').default%> 2x, <%=require('./img/footer_icon_facebook.png').default%> 1x"
+                                class="footer__icon">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+</body>
+</html>

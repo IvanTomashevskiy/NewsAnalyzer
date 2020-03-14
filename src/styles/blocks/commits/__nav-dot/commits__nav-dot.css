@@ -1,0 +1,22 @@
+@import url(./_active/commits__nav-dot_active.css);
+
+.commits__nav-dot {
+    width: 8px;
+    height: 8px;
+    background: #D1D2D6;
+    border: none;
+    border-radius: 8px;
+
+    position: absolute;
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.commits__nav-dot:first-of-type {
+    margin-left: 0px;
+}
+
+.commits__nav-dot:last-of-type {
+    margin-left: 32px;
+    margin-right: 0px;
+}

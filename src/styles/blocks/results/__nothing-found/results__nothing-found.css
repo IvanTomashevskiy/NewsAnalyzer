@@ -1,0 +1,10 @@
+.results__nothing-found {
+    width: 100%;
+    max-width: 1230px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+.results__caption_h2 {
+    font-size: 40px;
+    line-height: 46px;
+}
+
+@media screen and (max-width: 570px) {
+    .results__line .results__caption_h2 {
+        margin-block-end: 16px;
+    }
+}
+

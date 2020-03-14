@@ -1,0 +1,20 @@
+.commits__swiper-button {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: #1A1B22;
+    box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.2);
+    border: none;
+    border-radius: 20px;
+
+    position: absolute;
+}
+.commits__swiper-button:hover {
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+    .commits__swiper-button {
+        display: none;
+    }
+}

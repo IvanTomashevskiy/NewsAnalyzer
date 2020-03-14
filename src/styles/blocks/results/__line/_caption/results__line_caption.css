@@ -1,0 +1,9 @@
+.results .results__line_caption {
+    margin-bottom: 64px;
+}
+
+@media screen and (max-width: 570px) {
+    .results .results__line_caption {
+        margin-bottom: 40px;
+    }
+}

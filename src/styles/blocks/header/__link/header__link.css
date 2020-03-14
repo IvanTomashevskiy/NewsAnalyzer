@@ -1,0 +1,25 @@
+.header__link {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__link:visited {
+    color: inherit;
+}
+
+.header__link:hover {
+    color: inherit;
+}
+
+@media screen and (max-width: 570px) {
+    .header__link {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

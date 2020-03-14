@@ -1,0 +1,12 @@
+.search__elements {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+@media screen and (max-width: 570px) {
+    .search__elements {
+        margin-top: 86px;
+    }
+}

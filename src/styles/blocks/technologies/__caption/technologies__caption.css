@@ -1,0 +1,24 @@
+.technologies__caption {
+    width: 344px;
+
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    
+    color: #1A1B22;
+
+    margin-block-start: 0px;
+}
+
+@media screen and (max-width: 570px) {
+    .technologies__caption {
+        width: auto;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+
+

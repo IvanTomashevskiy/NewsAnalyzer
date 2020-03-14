@@ -1,0 +1,43 @@
+@import url(./__agency/news__agency.css);
+@import url(./__caption/news__caption.css);
+@import url(./__date/news__date.css);
+@import url(./__image/news__image.css);
+@import url(./__text/news__text.css);
+
+.news {
+    width: 350px;
+    height: 528px;
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.news:hover {
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.4);
+}
+
+@media screen and (max-width: 1024px) {
+    .news {
+        width: 235px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news {
+        width: 175px;
+        height: 547px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .news {
+        width: auto;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    .news:last-of-type {
+        margin-bottom: 0px;
+    }
+}
