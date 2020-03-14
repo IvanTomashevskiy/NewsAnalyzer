@@ -1,5 +1,4 @@
 .swiper-button-next{
-    margin-right: 42px;
 }
 
 .arrow-next::after{
@@ -17,7 +16,11 @@
         display: none;
     }
 }
-
+@media screen and (min-width: 1024px){
+    .swiper-button-next{
+        display: block;
+    }
+}
 @media screen and (min-width: 1440px){
     .swiper-button-next{
         display: block;
