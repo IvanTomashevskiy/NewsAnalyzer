@@ -9,7 +9,8 @@ import {
     errorBlock,
     emptyBlock,
     analyticLink,
-    buttonSearch
+    buttonSearch,
+    resultsCaption
 } from '../modules/Dom';
 
 export class Cards {
@@ -40,6 +41,7 @@ export class Cards {
     }
 
     newsEmpty() {
+        this.blockVisible(resultsCaption, 'none');
         this.blockVisible(errorBlock, 'none');
         this.blockVisible(preloaderBlock, 'none');
         this.blockVisible(analyticLink, 'none');
@@ -123,44 +125,46 @@ export class Cards {
         return promise;
     }
 
-    _createBlocks(cardData, dateCalc) {
+    _createBlocks(cardData, dateCalcMas) {
         this._createCardElements();
         this._addClass();
         this._relatives();
         this.cardLink.setAttribute('href', cardData.url);
-        this.cardTextData.textContent = dateCalc.convertDate(cardData.publishedAt);
+        this.cardTextData.textContent = dateCalcMas.convertDate(cardData.publishedAt);
         this.cardTextWrapperTitle.textContent = cardData.title;
         this.cardTextWrapperMain.textContent = cardData.description; 
         this.cardTextFrom.textContent = cardData.source.name;        
         contentIndexResult.appendChild(this.cardLink);
     }
 
-    _makeCard(cardData, dateCalc) {        
+    _makeCard(cardData, dateCalcMas) {        
         this._checkLoadImage(cardData.urlToImage)
             .then((img) => {
-                this._createBlocks(cardData, dateCalc);
+                this._createBlocks(cardData, dateCalcMas);
                 this.contentIndexCard.insertBefore(img, this.contentIndexCard.firstChild);
             })
             .catch((error) => {
-                this._createBlocks(cardData, dateCalc);
+                this._createBlocks(cardData, dateCalcMas);
                 this.contentIndexCard.insertBefore(this._emptyPicture(), this.contentIndexCard.firstChild);
             });   
     }
 
-    
+    // метод, удаляющий кнопку "Показать еще", при достижении
+    // последней карточки в массиве
     _stopShow() {
         buttonMoreContainer.style.display = 'none';
         return;
     }
 
-    showMore(storage, dateCalc) {
+    // метод кнопки "Показать еще", показывающий следующие три карточки
+    showMore(storage, dateCalcMas) {
         this.startPosition = this.startPosition + CARDS_IN_LINE;
         for (let i = 0; i < CARDS_IN_LINE; i++) {
             if (i + this.startPosition >= storage.length) {
                 this._stopShow();
             }
             else {
-                this._makeCard(storage[i + this.startPosition], dateCalc);
+                this._makeCard(storage[i + this.startPosition], dateCalcMas);
                 if (i + 1 + this.startPosition >= storage.length) {
                     this._stopShow();
                 }
@@ -168,7 +172,7 @@ export class Cards {
         }
     }
 
-    createCardsBlock(storage, dateCalc) {
+    createCardsBlock(storage, dateCalcMas) {
         this.startPosition = 0;
         const lastQuery = JSON.parse(localStorage.getItem('query'));
         if (lastQuery) {
@@ -178,12 +182,12 @@ export class Cards {
         
         if (storage.length > CARDS_IN_LINE) {        
             for (let i = 0; i < CARDS_IN_LINE; i ++) {        
-                this._makeCard(storage[i], dateCalc);    
+                this._makeCard(storage[i], dateCalcMas);    
             }
                   
         } else {
             storage.forEach((item) => {
-                this._makeCard(item, dateCalc);
+                this._makeCard(item, dateCalcMas);
             });    
         }
     }

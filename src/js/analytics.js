@@ -1,8 +1,8 @@
 import "../styles/pages/analytics.css";
 import {DateCalc} from '../js/modules/Date';
 import {Storage} from '../js/modules/storage';
-import {Captions} from '../styles/blocks/analytics/captions';
-import {Gistogram} from '../styles/blocks/analytics/gistogram';
+import {Captions} from './modules/captions';
+import {Gistogram} from './modules/gistogram';
 
 const dateCalc = () => new DateCalc;
 const storage = new Storage;

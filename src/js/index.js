@@ -28,7 +28,7 @@ const newsApi = new NewsAPI(dateForApi);
 
 const storage = new Storage;
 const cards = new Cards;
-import Validate from '../js/modules/val'
+import Validate from './modules/validate'
 
 
 
