@@ -3,6 +3,7 @@
 @import url('./swiper-container/swiper-container.css');
 @import url('./swiper-slide/swiper-slide.css');
 @import url('./slide-block/slide-block.css');
+@import url('./transparency-wrapper/transparency-wrapper.css');
 .slider{
     margin: 0 auto;
     background-color: #F5F6F7;

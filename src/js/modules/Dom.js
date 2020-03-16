@@ -26,3 +26,5 @@ export const buttonSearch = document.querySelector('.search__button');
 export const contentIndexResult = document.querySelector('.results__lines');
 
 export const contentInput = document.querySelector('.search__form');
+export const resultsCaption = document.querySelector('.results__caption_h2');
+

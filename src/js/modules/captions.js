@@ -1,13 +1,13 @@
 import {
     TEXT_QUERY,
     TEXT_QUERY_REG
-} from '../../../js/modules/consts';
+} from './consts';
 
 import {
     titleAnalytics,
     newsCount,
     titleQueryCount
-} from '../../../js/modules/Dom';
+} from './Dom';
 
 export class Captions {
     constructor(storage) {

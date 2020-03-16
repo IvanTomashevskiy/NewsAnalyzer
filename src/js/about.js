@@ -18,8 +18,8 @@ const slider = new Slider;
 const maxCommitCount = 20;
 
 gitHubApi.getCommites()
-    .then(data => {
-        let countCards = data.length;
+    .then(dataMas => {
+        let countCards = dataMas.length;
         if (countCards === 0) {
             swiperWrapper.appendChild(sliderCards.errorCard('Коммиты не найдены'));
             slider.activate(countCards);
@@ -28,7 +28,7 @@ gitHubApi.getCommites()
                 countCards = 20;
             }
             for (let i = 0; i != countCards; i++) {
-                swiperWrapper.appendChild(sliderCards.makeCard(data[i]));  
+                swiperWrapper.appendChild(sliderCards.makeCard(dataMas[i]));  
             }
             slider.activate(countCards);
         }

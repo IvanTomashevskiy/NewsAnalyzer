@@ -1,11 +1,11 @@
-import {TEXT_QUERY_REG} from '../../../js/modules/consts';
+import {TEXT_QUERY_REG} from './consts';
 
 import {
     daysWeekArray,
     daysWeekGraphArray,
     lineGraphArray,
     dataCaption
-} from '../../../js/modules/Dom';
+} from './Dom';
 
 export class Gistogram {
     constructor(dateCalc, storage) {
@@ -46,7 +46,7 @@ export class Gistogram {
         });
 
         daysWeekGraphArray.forEach((item, index) => {
-            let count = this._queryObject()[`day${index}`];
+            const count = this._queryObject()[`day${index}`];
             if (count === 0) {
 
                 // меняется цвет числа в гистограмме, на черный.

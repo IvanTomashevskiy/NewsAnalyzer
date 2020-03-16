@@ -1,4 +1,4 @@
-import {CARDS_IN_LINE} from './consts';
+import {CARDS_IN_LINE} from '../modules/consts';
 
 import {
     input,
@@ -9,8 +9,9 @@ import {
     errorBlock,
     emptyBlock,
     analyticLink,
-    buttonSearch
-} from './Dom';
+    buttonSearch,
+    resultsCaption
+} from '../modules/Dom';
 
 export class Cards {
     constructor() {
@@ -40,6 +41,7 @@ export class Cards {
     }
 
     newsEmpty() {
+        this.blockVisible(resultsCaption, 'none');
         this.blockVisible(errorBlock, 'none');
         this.blockVisible(preloaderBlock, 'none');
         this.blockVisible(analyticLink, 'none');
@@ -99,7 +101,6 @@ export class Cards {
         this.cardTextWrapper.appendChild(this.cardTextWrapperMain);
     }
 
-    // метод отображения надписи "Изображение не найдено.", в случае отсутствия изображения новости, на сервере
     _emptyPicture() {
         this.nonPictureBlock = document.createElement('div');
         this.message = document.createElement('p');
@@ -110,7 +111,6 @@ export class Cards {
         return this.nonPictureBlock;
     }
 
-    // проверка доступности картинки карточки новостей на сервере
     _checkLoadImage(url) {
         const promise = new Promise((resolve, reject) => {
             const image = document.createElement('img');
@@ -125,28 +125,26 @@ export class Cards {
         return promise;
     }
 
-    // создание готовой карточки без картинки
-    _createBlocks(cardData, dateCalc) {
+    _createBlocks(cardData, dateCalcMas) {
         this._createCardElements();
         this._addClass();
         this._relatives();
         this.cardLink.setAttribute('href', cardData.url);
-        this.cardTextData.textContent = dateCalc.convertDate(cardData.publishedAt);
+        this.cardTextData.textContent = dateCalcMas.convertDate(cardData.publishedAt);
         this.cardTextWrapperTitle.textContent = cardData.title;
         this.cardTextWrapperMain.textContent = cardData.description; 
         this.cardTextFrom.textContent = cardData.source.name;        
         contentIndexResult.appendChild(this.cardLink);
     }
 
-    // добавление картинки новостей, в зависисмости от ее доступности на сервере
-    _makeCard(cardData, dateCalc) {        
+    _makeCard(cardData, dateCalcMas) {        
         this._checkLoadImage(cardData.urlToImage)
             .then((img) => {
-                this._createBlocks(cardData, dateCalc);
+                this._createBlocks(cardData, dateCalcMas);
                 this.contentIndexCard.insertBefore(img, this.contentIndexCard.firstChild);
             })
             .catch((error) => {
-                this._createBlocks(cardData, dateCalc);
+                this._createBlocks(cardData, dateCalcMas);
                 this.contentIndexCard.insertBefore(this._emptyPicture(), this.contentIndexCard.firstChild);
             });   
     }
@@ -159,14 +157,14 @@ export class Cards {
     }
 
     // метод кнопки "Показать еще", показывающий следующие три карточки
-    showMore(storage, dateCalc) {
+    showMore(storage, dateCalcMas) {
         this.startPosition = this.startPosition + CARDS_IN_LINE;
         for (let i = 0; i < CARDS_IN_LINE; i++) {
             if (i + this.startPosition >= storage.length) {
                 this._stopShow();
             }
             else {
-                this._makeCard(storage[i + this.startPosition], dateCalc);
+                this._makeCard(storage[i + this.startPosition], dateCalcMas);
                 if (i + 1 + this.startPosition >= storage.length) {
                     this._stopShow();
                 }
@@ -174,26 +172,22 @@ export class Cards {
         }
     }
 
-    // создание карточек
-    createCardsBlock(storage, dateCalc) {
+    createCardsBlock(storage, dateCalcMas) {
         this.startPosition = 0;
         const lastQuery = JSON.parse(localStorage.getItem('query'));
         if (lastQuery) {
             input.value = lastQuery;
         }
             
-        // в случае, если карточек > 3, происходит последовательная отрисовка
-        // карточек - по три в каждой строке, при нажатии на кнопку "Показать еще"
+        
         if (storage.length > CARDS_IN_LINE) {        
             for (let i = 0; i < CARDS_IN_LINE; i ++) {        
-                this._makeCard(storage[i], dateCalc);    
+                this._makeCard(storage[i], dateCalcMas);    
             }
-                
-            // если карточек < 3, кнопка "Показать еще" не 
-            // требуется, происходит отрисовка имеющихся карточек    
+                  
         } else {
             storage.forEach((item) => {
-                this._makeCard(item, dateCalc);
+                this._makeCard(item, dateCalcMas);
             });    
         }
     }
